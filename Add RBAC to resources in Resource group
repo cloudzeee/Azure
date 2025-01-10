@@ -24,3 +24,18 @@ Click Save.
 3. Verify Role Assignments
 Return to Access Control (IAM) in the resource group.
 Review the Role Assignments tab to ensure both Managed Identities are listed with the Storage File Data SMB Share Contributor role.
+
+TASK:
+To assign RBAC to a resource to allow another resource acces the resource
+
+Basically Navigate to the Resource Group:
+
+In the Azure Portal, go to the ps resource group.
+Click on Access Control (IAM) from the left menu.
+Add Role Assignment:
+
+Click + Add > Add Role Assignment.
+Select the Storage File Data SMB Share Contributor role.
+Under Assign Access To, choose Managed Identity.
+Search for and select the Function App and App Service identities (one at a time).
+Click Save.
