@@ -1,0 +1,56 @@
+To allow selected networks access to an Azure Key Vault, you can configure the Key Vault firewall and virtual network (VNet) settings. Follow these steps:
+
+---
+
+### **1. Navigate to the Key Vault**
+1. Sign in to the [Azure portal](https://portal.azure.com/).
+2. Go to **Key Vaults** and select the Key Vault you want to configure.
+
+---
+
+### **2. Access Networking Settings**
+1. In the left-hand menu of the Key Vault, click **Networking** under the **Settings** section.
+
+---
+
+### **3. Configure the Firewall and Virtual Networks**
+1. **Select the access configuration**:
+   - Under **Public access**, choose **Selected networks**.
+   
+2. **Add Virtual Networks**:
+   - In the **Virtual networks** section, click **Add existing virtual network**.
+   - Select the **Subscription**, **Virtual Network**, and **Subnet** where access to the Key Vault is required.
+   - Click **Add**.
+
+3. **Add IP Address Ranges (Optional)**:
+   - In the **Firewall** section, add any specific IP address ranges or individual IPs that should be allowed access.
+   - Enter the IP address or range in CIDR notation (e.g., `203.0.113.0/24`).
+
+---
+
+### **4. Enable Service Endpoints for the Virtual Network (if applicable)**
+1. Navigate to the Virtual Network you added in the Azure portal.
+2. Go to **Subnets**, and select the subnet you want to configure.
+3. Under **Service Endpoints**, add **Microsoft.KeyVault** as a service endpoint.
+4. Save the changes.
+
+---
+
+### **5. Test the Access Configuration**
+1. Use a client (e.g., a VM in the allowed network or an application running in an allowed subnet) to access the Key Vault.
+2. Confirm that unauthorized networks are blocked.
+
+---
+
+### **6. Save and Apply the Configuration**
+1. In the Key Vault Networking settings, click **Save** to apply your changes.
+2. Ensure that the Key Vault's firewall and network rules are updated successfully.
+
+---
+
+### **7. (Optional) Configure Access Policies**
+Ensure that Azure Active Directory (AAD) identities (users, groups, or service principals) from the allowed networks also have proper access permissions in **Access Policies**.
+
+---
+
+Let me know if you'd like additional details or help with these steps!
