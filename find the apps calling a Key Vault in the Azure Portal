@@ -1,0 +1,26 @@
+To find the apps calling a Key Vault in the Azure Portal, you can monitor access logs and use Azure Monitor. Check the "Access policies" in your Key Vault for applications with permissions, and review the "Activity log" for entries related to Key Vault access. Additionally, consider using Key Vault insights for detailed monitoring. **Steps to Find Apps Calling a Key Vault in Azure Portal**
+
+1. **Check Access Policies**:
+   - Navigate to your Key Vault in the Azure Portal.
+   - Select **Access policies** from the left-hand menu.
+   - Review the list of applications and identities that have been granted permissions to access the Key Vault. This will show you which apps can call the Key Vault.
+
+2. **Review Activity Logs**:
+   - Go to the **Activity log** in the Azure Portal.
+   - Filter the logs by the Key Vault resource to see all operations performed on it.
+   - Look for entries that indicate access to secrets, keys, or certificates, which will help identify which applications are making calls to the Key Vault.
+
+3. **Use Azure Monitor**:
+   - Set up Azure Monitor to track metrics and logs related to your Key Vault.
+   - Create alerts for specific operations, such as secret retrieval, to get notified when an app accesses the Key Vault.
+
+4. **Enable Diagnostic Settings**:
+   - In your Key Vault, navigate to **Diagnostic settings**.
+   - Enable logging for operations such as "Get Secret" and "Get Key".
+   - Send these logs to a Log Analytics workspace for further analysis.
+
+5. **Utilize Key Vault Insights**:
+   - Use Key Vault insights to get a visual representation of access patterns and usage.
+   - This can help you identify which applications are frequently accessing the Key Vault.
+
+By following these steps, you can effectively monitor and identify the applications that are calling your Key Vault in Azure.
