@@ -1,0 +1,21 @@
+Microsoft Entra ID and Azure RBAC handle these different responsibilities.
+🔹 What is Microsoft Entra ID & Its Roles?
+📌 Microsoft Entra ID is Azure’s identity & access management (IAM) system. It controls who can sign in and manage things like users, groups, and applications. https://lnkd.in/dnK5TeE7
+✅ Example:
+Global Administrator – Has full control over identity and security settings (like the CEO of the company).
+📢 Key takeaway: Microsoft Entra ID manages identities & authentication—not cloud resources
+
+📌 Azure Role-Based Access Control (RBAC) manages who can access and modify Azure cloud resources (e.g., virtual machines, databases, storage accounts).
+💼 Azure RBAC Roles = Permissions for managing cloud infrastructure.
+📢 Key takeaway: Azure RBAC manages access to cloud resources—not user identities!
+
+Here's an example of a simple use-case:
+💡 You hire a new DevOps Engineer.
+ ✅ Assign them the User Administrator role in Microsoft Entra ID so they can add new employees.
+ ✅ Assign them the Contributor role in Azure RBAC so they can deploy & manage cloud resources.
+💡 Scenario 2: You bring in an external consultant to audit your cloud costs.
+ ✅ Assign them Reader access in Azure RBAC so they can view cloud usage.
+ ✅ No need to assign Microsoft Entra ID roles unless they need access to manage users.
+💡 Task for You
+If you were managing TechAbby.io and it is deployed as a Web App, which role would you need most—Microsoft Entra ID or Azure RBAC? Drop your thoughts below! 👇🏾
+🔗 Remember: Microsoft Entra ID is for managing WHO can sign in, Azure RBAC is for managing WHAT they can do in Azure! 🚀
